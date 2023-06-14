@@ -67,8 +67,26 @@ console.log("start")
 // console.time("timer");
 
 
+//? setTimeOut Örnek 2
 
 
+setTimeout(() =>{
+    console.log("2000")
+}, 2000
+)
+setTimeout(() =>{
+    console.log("1000")
+}, 1000
+)
+
+console.log("start")
+
+//* Asenkron (setInterval, clearInterval)
+//* ---------------------------------------
+
+//? setInterval periyodik yapmak için 
+//? her 10 saniyede şu işlemi yap gibi
+//? clearInterval'da oluşturulan zamanı siliyor.
 
 
 
