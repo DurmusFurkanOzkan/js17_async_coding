@@ -45,5 +45,23 @@ const networkReq = new Promise( (resolve,reject) => {
 
 })
 
+
 //? hatayı handle etmek için catch kullanılır.
-networkReq.then((res) => console.log(res)).catch((err) => document.write(err))
+networkReq.then((res) => console.log(res))
+.then(() => console.log("2. then"))
+.catch((err) => document.write(err))
+.finally(() => console.log("Her zaman çalışır"))
+
+//? Alternatif olarak hatayı handle etmek için try-catch bloğu da kullanılabilir.
+
+// try {
+//     networkReq
+//       .then((response) => console.log(response))
+//       .then(() => console.log("2. then"))
+//   } catch (err) {
+//     document.write(err)
+//   } finally {
+//     console.log("Her zaman calisir")
+//   }
+
+//   console.log(networkReq)
