@@ -104,7 +104,24 @@ const sec1 = setInterval(() => {
 }, 1000);
 
 
+//! Callback Hell (nested ve birbirine bagli callback'ler)
+//!-----------------------------------------------------
+//* Eger birbirine bagimli asenkron kodlarin yazilmasi gerekirse,nested callback
+//* yapisinin kullanilmasi gerekebilir. Fakat bu iyi bir programlama yaklasimi degildir.
+// !callback hell olarak adlandirilan bu yapinin anlasilmasi ve surdurulebilirligi oldukca zordur.
 
+setTimeout(() => {
+    console.log("john:Hi")
+    setTimeout(() => {
+      console.log("Sarah: Hello")
+      setTimeout(() => {
+        console.log("John: How Are you?")
+        setTimeout(() => {
+          console.log("Sarah:Fine and you?")
+        }, 1000)
+      }, 1000)
+    }, 1000)
+  }, 1000)
 
 
 
