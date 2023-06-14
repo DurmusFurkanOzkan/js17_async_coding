@@ -57,6 +57,7 @@ console.log("hi")
 //? burada da clg start callstackte setTimeout'da macrotask'de olduğundan 
 //? clg start daha önce işlenir.
 //? detaylı bakmak için taskQueus gifine bak.
+
 setTimeout(() =>{
     console.log("Data fetched")
     // console.timeEnd("timer");
