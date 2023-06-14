@@ -51,6 +51,7 @@ console.log("hi")
 
 
 //? belirli bir süre sonra bir işlem yapmak için
+//? 5 saniye sonra içindekini çalıştır
 
 //? async functionlar macrotask queue'ya atılır. 
 //? microtasklar ve callstackler macrotask'a göre daha önceliklidir
@@ -88,8 +89,19 @@ console.log("start")
 //? her 10 saniyede şu işlemi yap gibi
 //? clearInterval'da oluşturulan zamanı siliyor.
 
+//? en az 1 saniyede bir işlem çalışır bu süre queues 
+//? sıralarından dolayı uzayabilir.
 
-
+//? clearInterval parametre olarak id alır. setInterval'da id döndürür.
+//? ikisini eşleştirmek için setInterval id'sini clearInterval'a parametre olarak
+//? vermeliyiz.
+let count = 0;
+const sec1 = setInterval(() => {
+    console.log(++count)
+    if (count > 9) {
+        clearInterval(sec1)
+    }
+}, 1000);
 
 
 
