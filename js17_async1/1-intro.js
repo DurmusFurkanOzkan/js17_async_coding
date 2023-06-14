@@ -37,10 +37,43 @@ console.log("Hello");
 
 
 console.time("gecikme");
-delay(4000); //? blocking code - senkron
+// delay(4000); //? blocking code - senkron
 console.timeEnd("gecikme");
 
 console.log("hi")
+
+
+
+//* Asenkron (setTimeout())
+//* -----------------------------------------
+
+console.log("start")
+
+
+//? belirli bir süre sonra bir işlem yapmak için
+
+console.time("timer");
+setTimeout(() =>{
+    console.log("Data fetched")
+    console.timeEnd("timer");
+}, 5000
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
